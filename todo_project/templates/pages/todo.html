@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Todos{% endblock %}
+
+{% block content %}
+<h1>Todos</h1>
+<ul>
+  {% for data in dataset %}
+    <li>
+      {{ data.author }} | {{ data.title }} | {{ data.due_date }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock content %}
